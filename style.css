@@ -618,7 +618,10 @@ h3.my-proffession{
 .portfolio .portfolio-item-inner .portfolio-img img{
     width: 100%;
     display: block;
+    
 }
+
+
 /*CONTACT*/
 .contact-title{
     color: var(--skin-color);
