@@ -1,5 +1,6 @@
+
 /*============================= typing animation============== */
-var typed=new Typed(".typing",{
+let yazi=new Typed(".typing",{
     strings:["Web Designer","Web Developer","Full-Stack Developer","Student :)"],
     typeSpeed:100,
     BackSpeed:60,

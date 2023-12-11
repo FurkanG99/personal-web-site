@@ -54,7 +54,6 @@ ul{
 }
 
 
-
 .main-content{
     padding-left: 270px;
 
@@ -134,6 +133,7 @@ ul{
     border: none;
     background: var(--skin-color);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -299,10 +299,14 @@ h3.my-proffession{
 
 }
 
-.home-info p{
-    margin-bottom: 70px;
-    font-size: 20px;
-    color: var(--text-black-700);
+.home-info div{
+    -webkit-perspective: 400px;
+    font-size:22px;
+    line-height:44px;
+    pointer-events: none;
+    color:#dedede;
+    display: inline-block;
+
 }
 
 .home .home-img{
