@@ -299,16 +299,6 @@ h3.my-proffession{
 
 }
 
-.home-info div{
-    -webkit-perspective: 400px;
-    font-size:22px;
-    line-height:44px;
-    pointer-events: none;
-    color:#dedede;
-    display: inline-block;
-
-}
-
 .home .home-img{
     flex: 0 0 40%;
     max-width: 40%;
