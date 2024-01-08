@@ -115,4 +115,3 @@ function scrollToSection(pageId) {
         targetSection.scrollIntoView({ behavior: 'smooth' });
     }
 }
-

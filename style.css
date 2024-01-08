@@ -134,6 +134,7 @@ ul{
     background: var(--skin-color);
     transition: all 0.3s ease;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn:hover{
@@ -230,6 +231,8 @@ ul{
     top: -6px;
     left: 0;
     }
+
+    
 
     .aside .nav-toggler span::after{
         content: '';
