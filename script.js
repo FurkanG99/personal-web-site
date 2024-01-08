@@ -115,3 +115,70 @@ function scrollToSection(pageId) {
         targetSection.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll(".nav a");
+  
+    function changeActiveSection() {
+      const scrollPosition = window.scrollY;
+  
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 50; 
+        const sectionHeight = section.clientHeight;
+        const sectionId = section.getAttribute("id");
+  
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          navLinks.forEach((navLink) => {
+            navLink.classList.remove("active");
+            if (navLink.getAttribute("href") === `#${sectionId}`) {
+              navLink.classList.add("active");
+            }
+          });
+        }
+      });
+    }
+  
+    // Add scroll event listener
+    window.addEventListener("scroll", changeActiveSection);
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const popupLinks = document.querySelectorAll(".popup-link");
+  
+    popupLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const imageUrl = this.getAttribute("href");
+        openPopup(imageUrl);
+      });
+    });
+  
+    function openPopup(imageUrl) {
+      // Example: You can create a simple modal or use a library like Fancybox
+      alert("Open popup for " + imageUrl);
+    }
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    const popupLinks = document.querySelectorAll(".popup-link");
+  
+    popupLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const popupId = this.getAttribute("id");
+        openPopup(popupId);
+      });
+    });
+  
+    function openPopup(popupId) {
+      const popup = document.getElementById(popupId);
+      popup.style.display = "flex";
+    }
+  
+    // Function to close the popup
+    window.closePopup = function (popupId) {
+      const popup = document.getElementById(popupId);
+      popup.style.display = "none";
+    };
+  });
+  
